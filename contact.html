@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href = "stylesheet" href = "http://sulley.cah.ucf.edu/~ti153451/GRA3803c_FinalProject/ClubNailsandSpa/materialize-v0.99.0/materialize/css/materialize.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lato" rel="stylesheet">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+<script>
+	function initMap() {
+        var chicago = {lat: 41.85, lng: -87.65};
+        var orlando = {lat: 28.54, lng: -81.38};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: chicago,
+          scrollwheel: false,
+          zoom: 7
+        });
+
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+          map: map
+        });
+
+        // Set destination, origin and travel mode.
+        var request = {
+          destination: orlando,
+          origin: chicago,
+          travelMode: 'DRIVING'
+        };
+
+        // Pass the directions request to the directions service.
+        var directionsService = new google.maps.DirectionsService();
+        directionsService.route(request, function(response, status) {
+          if (status == 'OK') {
+            // Display the route on the map.
+            directionsDisplay.setDirections(response);
+          }
+        });
+      }
+</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQYNKSeepGArGeTbVpvnnKOLoKjZW_y4g&callback=initMap">
+    </script>
+
+  <nav>
+    <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo"><img src = "http://sulley.cah.ucf.edu/~ti153451/GRA3803c_FinalProject/ClubNailsandSpa/images/clubnailsandspa.png" alt = "logo"></a>
+	  <a href="#" data-activates="mobile-demo" class="button-collapse" style="color:#79a058"><i class="material-icons">
+		<div class = "burger"></div>
+		<div class = "burger"></div>
+		<div class = "burger"></div>
+	  </i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+	   <ul class="side-nav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<h4>Contact Us</h4>
+<div class = "contact">
+<p>(407) 384-8700</p>
+<p>11229 E Colonial Dr. Orlando, FL 32817</p> 
+</div>
+
+ <div class="row">
+        <div class="col s12 m6">
+ <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">Message</label>
+        </div>
+	  </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+			<i class="material-icons right">send</i>
+		</button>
+
+    </form>
+  </div>
+        
+        </div>
+		<div class="col s12 m6">
+              <h5 class = "contact">Map</h5>
+              <p class = "contact">We are conveniently located across the street from the Super Wal-Mart 
+on Colonial Drive near Alafaya Trail in the Broyhill Plaza Shopping Center.</p>
+			<div id="map"></div>
+          </div>
+        </div>  
+                   
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Club Nails and Spa</h5>
+                <p class="grey-text text-lighten-4">Hours/Location</p>
+                <p class="grey-text text-lighten-4">Monday thru Saturday
+				<br>9:30am - 7:30pm
+				<br>Closed Sundays
+				<br>(407) 384-8700</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Sitemap</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="specials.html">Specials</a></li>
+                  <li><a class="grey-text text-lighten-3" href="gallery.html">Gallery</a></li>
+                  <li><a class="grey-text text-lighten-3" href="prices.html">Prices</a></li>
+                  <li><a class="grey-text text-lighten-3" href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            11229 E Colonial Dr Orlando, FL 32817
+            </div>
+          </div>
+        </footer>            
+        </footer>            
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://sulley.cah.ucf.edu/~ti153451/GRA3803c_FinalProject/ClubNailsandSpa/materialize-v0.99.0/materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="http://sulley.cah.ucf.edu/~ti153451/GRA3803c_FinalProject/ClubNailsandSpa/materialize-v0.99.0/materialize/js/materialize.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".button-collapse").sideNav();
+		 $('.slider').slider();
+	});
+
+</script>
+</body>
+</html>

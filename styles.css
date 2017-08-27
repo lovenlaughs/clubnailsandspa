@@ -1,0 +1,114 @@
+body {
+	background-color: #fbf7fb;
+}
+
+nav {
+	background-color: white;
+	font-family: 'Droid Serif', serif;
+}
+
+a.brand-logo {
+	color: #79a058;
+}
+
+.slider {
+	font-family: 'Lato', sans-serif;
+}
+
+ul li a {
+	color: #79a058;
+	font-family: 'Lato', sans-serif;
+}
+
+.burger {
+    width: 35px;
+    height: 2px;
+    background-color: #79a058;
+	margin-top: 5px;
+}
+
+.button-collapse {
+	padding: 16px;
+}
+
+h1 {
+	text-align: center;
+	color: #402060;
+	font-family: 'Lato', sans-serif;
+}
+
+h4 {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+p {
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+.card-title {
+	font-family: 'Lato', sans-serif;
+}
+
+.contact {
+	text-align: center;
+}
+
+#map {
+   width: 75%;
+   height: 400px;
+   background-color: grey;
+   margin-top: 2%;
+   margin-left: 15%;
+ }
+ 
+@media screen and (max-width: 580px) {
+	#map {
+		width: 85%;
+		height: 400px;
+		background-color: grey;
+		margin-top: 2%;
+		margin-left: 1%;
+ }
+}
+
+.page-footer {
+	background-color: #79a058;
+	font-family: 'Lato', sans-serif;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.rating .stars {
+  margin-right: 15px;
+}
+
+.rating .stars .star {
+  float: left;
+  padding: 5px 2px;
+  cursor: pointer;
+}
+
+.rating .stars .star:before {
+  font-family: 'FontAwesome';
+  content: '\f005';
+  color: #d0e8f0;
+  font-size: 3em;
+}
+
+.rating .stars .star:hover:before,
+.rating .stars .star.to_rate:before,
+.rating .stars .star.rated:before {
+  color: #80c1d5;
+}
+
+.rating .stars .star.no_to_rate:before {
+  color: #d0e8f0;
+}
